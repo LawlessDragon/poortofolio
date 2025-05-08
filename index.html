@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murreki - Photography Portfolio</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=Audiowide&family=Orbitron:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;700&family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-logo">Murreki</div>
+        <div class="nav-links">
+            <a href="#intro">Home</a>
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#dokumentasi">Event Archive</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Section 1: Intro -->
+    <section id="intro" class="section">
+        <div class="intro-background">
+            <div class="image-slideshow">
+                <div class="slide active" style="background-image: url('./assets/images/slideshow/slide1.jpg');"></div>
+                <div class="slide" style="background-image: url('./assets/images/slideshow/slide2.jpg');"></div>
+                <div class="slide" style="background-image: url('./assets/images/slideshow/slide3.jpg');"></div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <div class="ornament mega-mendung top-right ornament-gold"></div>
+        <div class="ornament floral-corner bottom-left ornament-gold"></div>
+        <div class="intro-content">
+            <h1>Hi, I'm Murreki</h1>
+            <h2>Photographer of the silent frames</h2>
+            <div class="intro-buttons">
+                <a href="#work" class="btn primary-btn">Lihat Karya</a>
+                <a href="#contact" class="btn secondary-btn">Hubungi Saya</a>
+            </div>
+            <a href="#about" class="scroll-down">
+                <span>Scroll Down</span>
+                <div class="arrow"></div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Section 2: About -->
+    <section id="about" class="section">
+        <div class="particles" id="particles"></div>
+        <div class="ornament mega-mendung top-right ornament-gold"></div>
+        <div class="ornament floral-corner top-left ornament-gold"></div>
+        <div class="ornament floral-corner bottom-right ornament-gold"></div>
+        <div class="section-inner">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Tentang Saya</h2>
+                    <p>Saya adalah seorang fotografer pemula yang menjadikan kamera sebagai sahabat dalam melihat dunia dari sudut pandang yang berbeda. Saya senang membidik apa saja—dari lanskap alam, suasana kota, hingga momen-momen spontan yang sering terlewatkan oleh mata biasa.</p>
+                    <p>Bagi saya, fotografi bukan sekadar hobi, tetapi cara untuk menangkap emosi, cerita, dan keindahan tersembunyi dalam kehidupan sehari-hari. Selain itu, saya juga seorang fursuiter dan bagian dari komunitas furry, di mana saya dapat mengekspresikan sisi kreatif dan imajinatif saya melalui karakter yang saya ciptakan.</p>
+                    <p>Dunia fursuiting memberi saya ruang untuk bertransformasi, berinteraksi, dan menyebarkan kebahagiaan dengan cara yang unik dan penuh warna. Kombinasi antara fotografi dan fursuiting membuat saya merasa lebih hidup—karena saya bisa menjadi penonton sekaligus pemeran dalam cerita yang saya ciptakan sendiri."</p>
+                </div>
+                <div class="about-image">
+                    <img src="./assets/images/murreki-portrait.jpg" alt="Murreki">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Work -->
+    <section id="work" class="section">
+        <div class="particles" id="work-particles"></div>
+        <div class="ornament mega-mendung bottom-left ornament-gold"></div>
+        <div class="ornament floral-corner top-right ornament-gold"></div>
+        <div class="section-inner">
+            <h2>Karya Saya</h2>
+            <div class="work-intro">
+                <p>Dari balik lensa, saya menangkap warna-warna kehidupan—sebuah kisah visual tentang hal-hal kecil, karakter, dan ruang imajinasi yang menjadi bagian dari diri saya.</p>
+            </div>
+            
+            <div class="portfolio-categories">
+                <span class="category active" data-category="all">Semua</span>
+                <span class="category" data-category="landscape">Lanskap</span>
+                <span class="category" data-category="portrait">Potret</span>
+                <span class="category" data-category="furmeet">Furmeet</span>
+            </div>
+            
+            <div class="portfolio-container">
+                <div class="portfolio-carousel hardware-accelerated" id="portfolioCarousel">
+                    <!-- Landscape Photos -->
+                    <div class="portfolio-item" data-category="landscape">
+                        <div class="portfolio-image">
+                            <img src="./assets/images/portfolio/landscape/work-2.jpg" alt="Cahaya Senja">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-details">
+                                    <h3>Persona dalam bayang malam</h3>
+                                    <p class="location">KOPI BENTO YOGYAKARTA</p>
+                                    <p class="description">Vizzy berdiri dalam kabut, disinari cahaya belakang. Siluetnya menyiratkan misteri dan identitas baru.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="landscape">
+                        <div class="portfolio-image">
+                            <img src="./assets/images/portfolio/landscape/work-4.jpg" alt="Harmoni Alam">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-details">
+                                    <h3>Neon Rider: Realita Terdistorsi dalam Asap</h3>
+                                    <p class="location">KOPI BENTO YOGYAKARTA</p>
+                                    <p class="description">Sosok protogen di atas motor muncul dari asap dan cahaya. LED menyala tajam di tengah nuansa urban.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Portrait Photos -->
+                    <div class="portfolio-item" data-category="portrait">
+                        <div class="portfolio-image">
+                            <img src="./assets/images/portfolio/portrait/portrait-1.jpg" alt="Ekspresi Jiwa">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-details">
+                                    <h3>Ekspresi Jiwa</h3>
+                                    <p class="location">Stasiun Purwosari, Surakarta</p>
+                                    <p class="description">Dalam setiap tatapan, terdapat cerita tak terucap. Potret yang menangkap esensi dari persona yang tersembunyi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="portrait">
+                        <div class="portfolio-image">
+                            <img src="./assets/images/portfolio/portrait/portrait-2.jpg" alt="Sisi Lain">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-details">
+                                    <h3>Sisi Lain</h3>
+                                    <p class="location">Yogyakarta, Indonesia</p>
+                                    <p class="description">Ketika keindahan hadir dalam kesederhanaan. Sebuah potret yang mengungkapkan kekuatan dalam ketenangan.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Furmeet Photos -->
+                    <div class="portfolio-item" data-category="furmeet">
+                        <div class="portfolio-image">
+                            <img src="./assets/images/portfolio/furmeet/work-1.jpg" alt="Furmeet Gathering">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-details">
+                                    <h3>Furmeet: Warna dan Ekspresi</h3>
+                                    <p class="location">Jakarta, Indonesia</p>
+                                    <p class="description">Menangkap keceriaan dan keberagaman ekspresi para fursuiter penuh warna dengan latar urban yang natural.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item" data-category="furmeet">
+                        <div class="portfolio-image">
+                            <img src="./assets/images/portfolio/furmeet/work-3.jpg" alt="Furmeet Event">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-details">
+                                    <h3>Furmeet: Meriah bersama Fursuiter</h3>
+                                    <p class="location">Jakarta, Indonesia</p>
+                                    <p class="description">Merekam kebersamaan para fursuiter di panggung terang nan dinamis, dalam tarian warna-warni karakter yang padat namun teratur.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <div class="carousel-control next" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Testimonials -->
+    <section id="testimonials" class="section">
+        <div class="ornament mega-mendung top-left ornament-gold"></div>
+        <div class="ornament floral-corner bottom-right ornament-gold"></div>
+        <div class="section-inner">
+            <h2>Testimoni</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <div class="testimonial-image">
+                        <img src="./assets/images/client-1.jpg" alt="Lawless">
+                    </div>
+                    <blockquote>
+                        "Murreki tahu banget gimana caranya bikin detail kecil terasa hidup. Fotonya selalu nunjukkin emosi yang nggak dibuat-buat—kayak cerita yang dibekukan dalam satu frame."
+                    </blockquote>
+                    <cite>— Lawless</cite>
+                </div>
+
+                <div class="testimonial">
+                    <div class="testimonial-image">
+                        <img src="./assets/images/client-2.jpg" alt="Vizzy">
+                    </div>
+                    <blockquote>
+                        "Murreki udah jadi fotografer yang hebat dan berpengalaman—setiap jepretannya selalu punya gaya yang kece dan nggak biasa. Itulah ciri khas Murreki."
+                    </blockquote>
+                    <cite>— Vizzy</cite>
+                </div>
+
+                <div class="testimonial" style="display: none;">
+                    <div class="testimonial-image">
+                        <img src="./assets/images/client-3.jpg" alt="Murreki">
+                    </div>
+                    <blockquote>
+                        "Foto-foto Murreki berbicara lebih dari sekadar gambar. Ada jiwa dan emosi di setiap karyanya."
+                    </blockquote>
+                    <cite>— Murreki</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Dokumentasi -->
+    <section id="dokumentasi" class="section">
+        <div class="particles" id="dokumentasi-particles"></div>
+        <div class="ornament mega-mendung top-left ornament-gold"></div>
+        <div class="ornament floral-corner bottom-right ornament-gold"></div>
+        <div class="section-inner">
+            <div class="dokumentasi-content">
+                <div class="dokumentasi-column tanggal-sekarang">
+                    <div id="current-date">
+                        <div class="jam" id="current-time">08</div>
+                        <div class="hari" id="current-day">Kamis, 8 Mei 2025</div>
+                    </div>
+                </div>
+                <div class="dokumentasi-column folder-container">
+                    <h3 id="event-title"><!-- Judul event dari JSON --></h3>
+                    <div class="folder-icon">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <a href="#" id="drive-link" class="btn primary-btn">Lihat Album</a>
+                </div>
+                <div class="dokumentasi-column tanggal-event">
+                    <div class="date-label">Event Date</div>
+                    <div id="event-date">
+                        <span class="digit">12</span>
+                        <span class="separator">.</span>
+                        <span class="digit">02</span>
+                        <span class="separator">.</span>
+                        <span class="digit">2004</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="edit-modal" class="edit-modal">
+            <div class="edit-modal-content">
+                <h3>Edit Dokumentasi</h3>
+                <div class="form-group">
+                    <label for="edit-title">Judul Event</label>
+                    <input type="text" id="edit-title" placeholder="Masukkan judul event">
+                </div>
+                <div class="form-group">
+                    <label for="edit-date">Tanggal Event</label>
+                    <input type="text" id="edit-date" placeholder="DD MM YYYY">
+                </div>
+                <div class="form-group">
+                    <label for="edit-link">Link Google Drive</label>
+                    <input type="text" id="edit-link" placeholder="https://drive.google.com/...">
+                </div>
+                <div class="form-group">
+                    <label for="edit-background">Background Image URL</label>
+                    <input type="text" id="edit-background" placeholder="https://example.com/image.jpg">
+                </div>
+                <div class="edit-buttons">
+                    <button id="save-btn" class="btn primary-btn">Simpan Lokal</button>
+                    <button id="save-to-github-btn" class="btn primary-btn">Simpan ke GitHub</button>
+                    <button id="cancel-btn" class="btn secondary-btn">Batal</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Contact -->
+    <section id="contact" class="section">
+        <div class="particles" id="contact-particles"></div>
+        <div class="ornament mega-mendung top-right ornament-gold"></div>
+        <div class="ornament floral-corner bottom-left ornament-gold"></div>
+        <div class="section-inner">
+            <h2>Hubungi Saya</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Tertarik untuk berkolaborasi atau memiliki pertanyaan? Saya ingin mendengar dari Anda.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/murrekii_" target="_blank" class="instagram"><i class="fab fa-instagram"></i> @murrekii_</a>
+                        <a href="https://www.facebook.com/murreki.rif?locale=id_ID" target="_blank" class="facebook"><i class="fab fa-facebook"></i> Murreki Rif</a>
+                        <a href="https://www.tiktok.com/@murreki?is_from_webapp=1&sender_device=pc" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i> @murreki</a>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/manoopbq" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nama</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Murreki. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

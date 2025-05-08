@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "dokumentasi"
+    label: "Dokumentasi"
+    files:
+      - name: "dokumentasi-data"
+        label: "Data Dokumentasi"
+        file: "data/dokumentasi.json"
+        fields:
+          - {label: "Judul Event", name: "judul", widget: "string"}
+          - {label: "Tanggal Event", name: "tanggalEvent", widget: "string"}
+          - {label: "Link Google Drive", name: "linkDrive", widget: "string"}
+          - {label: "Background Image URL", name: "backgroundImage", widget: "string"}
