@@ -1,98 +1,100 @@
-# Portofolio Fotografer Murreki
+# Poortofolio
 
-Website portofolio interaktif untuk fotografer Murreki dengan konsep presentasi vertikal dan animasi berbasis GSAP.
+A dynamic, interactive portfolio website built with modern web technologies featuring vertical presentation and GSAP-powered animations.
 
-## Fitur
+## Technology Stack
 
-- Desain fullscreen vertikal dengan slide per bagian (100vh)
-- Transisi smooth dengan GSAP dan ScrollTrigger
-- Animasi interaktif untuk teks dan gambar
-- Efek parallax pada background
-- Efek partikel di bagian kontak
-- Tampilan responsif untuk berbagai ukuran layar
+- **Frontend**: 
+  - JavaScript (59.7%)
+  - CSS (25.5%)
+  - HTML (14.6%)
+  - TypeScript (0.2%)
+- **Animation**: GSAP (GreenSock Animation Platform) with ScrollTrigger
+- **Special Effects**: Particles.js
+- **Responsive Design**: Supports various screen sizes
 
-## Fitur Dokumentasi
+## Features
 
-Website ini memiliki section "Dokumentasi" yang berfungsi sebagai tempat menampilkan hasil foto-foto event tertentu. Fitur ini memiliki mekanisme unik untuk mempermudah update dokumentasi:
+- Full-screen vertical sliding sections (100vh)
+- Smooth transitions powered by GSAP and ScrollTrigger
+- Interactive text and image animations
+- Parallax background effects
+- Particle effects in the contact section
+- Responsive design for all screen sizes
 
-### Cara Akses Mode Edit
+## Documentation Feature
 
-1. Buka halaman web di section "Dokumentasi"
-2. Ketik kata "murreki" di keyboard (tanpa tanda kutip, tidak akan muncul di layar)
-3. Modal edit akan muncul untuk mengubah data
+The website includes a "Documentation" section with a unique updating mechanism:
 
-### Yang Bisa Diubah
+### Accessing Edit Mode
 
-- Judul Event
-- Tanggal Event
-- Link Google Drive
+1. Navigate to the "Documentation" section
+2. Type "murreki" (without quotes, won't be visible on screen)
+3. Edit modal will appear for data modification
+
+### Editable Elements
+
+- Event Title
+- Event Date
+- Google Drive Link
 - Background Image URL
 
-### Menyimpan Perubahan
+### Saving Changes
 
-Semua perubahan akan disimpan di localStorage browser. Untuk update permanen:
+Changes are stored in browser localStorage. For permanent updates:
 
-1. Klik tombol "Ekspor JSON" di modal edit
-2. File `data-dokumentasi.json` akan diunduh
-3. Upload file tersebut ke repository website Anda
+1. Click "Export JSON" in the edit modal
+2. Download the `data-dokumentasi.json` file
+3. Upload the file to the repository
 
-### Struktur File
+### Configuration File Structure
 
-File konfigurasi untuk dokumentasi terletak di `data-dokumentasi.json` dengan format:
+Documentation configuration is stored in `data-dokumentasi.json`:
 
 ```json
 {
-  "judul": "Nama Event",
-  "tanggalEvent": "Tanggal Event",
-  "linkDrive": "URL Google Drive",
-  "backgroundImage": "URL Gambar Background"
+  "judul": "Event Name",
+  "tanggalEvent": "Event Date",
+  "linkDrive": "Google Drive URL",
+  "backgroundImage": "Background Image URL"
 }
 ```
 
-**Catatan:** Jika field `backgroundImage` kosong (""), background default akan digunakan.
+**Note:** Empty `backgroundImage` field ("") will use default background.
 
-## Teknologi yang Digunakan
-
-- HTML5
-- CSS3 (vanilla)
-- JavaScript
-- GSAP (GreenSock Animation Platform)
-- ScrollTrigger
-- Particles.js
-
-## Struktur Proyek
+## Project Structure
 
 ```
 .
-├── index.html              # Halaman utama
+├── index.html              # Main page
 ├── assets/
 │   ├── css/
-│   │   └── style.css       # Stylesheet utama
+│   │   └── style.css      # Main stylesheet
 │   ├── js/
-│   │   ├── main.js         # Script JavaScript utama
-│   │   └── particles.min.js # Library particles.js
-│   └── images/             # Direktori untuk gambar
-└── README.md               # Dokumentasi proyek
+│   │   ├── main.js        # Main JavaScript
+│   │   └── particles.min.js # Particles.js library
+│   └── images/            # Image directory
+└── README.md              # Project documentation
 ```
 
-## Cara Penggunaan
+## Setup Instructions
 
-1. Clone repositori ini
-2. Buka file `index.html` di browser Anda
-3. Gulir ke bawah untuk melihat animasi antar slide
+1. Clone this repository
+2. Open `index.html` in your browser
+3. Scroll to experience the inter-slide animations
 
-## Gambar
+## Required Images
 
-Untuk menggunakan portofolio ini, Anda perlu menambahkan gambar Anda sendiri di direktori `assets/images/` dengan nama file berikut:
-- `murreki-portrait.jpg` - Untuk foto profil di bagian Tentang
-- `work-1.jpg` hingga `work-4.jpg` - Untuk galeri karya
-- `testimonial-bg.jpg` - Untuk background bagian testimoni
-- `client-1.jpg` hingga `client-3.jpg` - Untuk avatar klien di testimoni
+Add your images to `assets/images/` with the following filenames:
+- `murreki-portrait.jpg` - Profile photo
+- `work-1.jpg` to `work-4.jpg` - Portfolio gallery
+- `testimonial-bg.jpg` - Testimonial section background
+- `client-1.jpg` to `client-3.jpg` - Client testimonial avatars
 
-## Lisensi
+## License
 
-Silakan gunakan proyek ini untuk keperluan pribadi atau komersial.
+This project is available for both personal and commercial use.
 
 ---
 
-Dibuat dengan 💛 untuk Murreki 
+Made with 💻 by LawlessDragon
